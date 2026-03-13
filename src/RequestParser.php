@@ -282,8 +282,8 @@ class RequestParser
 				// Convert filter name to sql `column` format
 				$where = preg_replace(
 					[
-						"/([\\w]+)\\.([\\w]+)[\\s]+(eq|ne|gt|ge|lt|le|lk)/i",
-						"/([\\w]+)[\\s]+(eq|ne|gt|ge|lt|le|lk)/i",
+						"/([\\w]+)\\.([\\w]+)[\\s]+(eq|ne|gt|ge|lt|le|lk)\\b/i",
+						"/([\\w]+)[\\s]+(eq|ne|gt|ge|lt|le|lk)\\b/i",
 					],
 					[
 						"`$1`.`$2` $3",
